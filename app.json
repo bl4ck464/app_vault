@@ -1,0 +1,120 @@
+[
+    {
+        "id": "tryagain",
+        "name": "TryAgain",
+        "description": "A simple productivity app for tasks, goals and focused sessions.",
+        "longDescription": "TryAgain is a lightweight productivity application designed to help users organize tasks, create daily goals and maintain focused work sessions.",
+        "category": "Productivity",
+        "version": "1.0.0",
+        "size": "12 MB",
+        "rating": 4.8,
+        "downloads": 1240,
+        "android": "Android 7.0+",
+        "updated": "August 2026",
+        "developer": "Amin Code",
+        "redistributable": true,
+        "icon": "assets/tryagain.png",
+        "apk": "apks/tryagain.apk",
+        "hash": "a1b2c3d4e5f67890",
+        "releaseDate": "2026-08-20",
+        "screenshots": [
+            "assets/tryagain-1.png",
+            "assets/tryagain-2.png",
+            "assets/tryagain-3.png"
+        ],
+        "features": [
+            "Offline task management",
+            "Daily goals",
+            "Focused work sessions",
+            "Local data storage",
+            "Simple interface"
+        ]
+    },
+    {
+        "id": "codebox",
+        "name": "CodeBox",
+        "description": "A lightweight coding playground for Android.",
+        "longDescription": "CodeBox provides a simple environment for experimenting with code directly from an Android device.",
+        "category": "Tools",
+        "version": "1.2.0",
+        "size": "18 MB",
+        "rating": 4.7,
+        "downloads": 860,
+        "android": "Android 8.0+",
+        "updated": "August 2026",
+        "developer": "Amin Code",
+        "redistributable": true,
+        "icon": "assets/codebox.png",
+        "apk": "apks/codebox.apk",
+        "hash": "b2c3d4e5f6a78901",
+        "releaseDate": "2026-08-18",
+        "screenshots": [
+            "assets/codebox-1.png",
+            "assets/codebox-2.png"
+        ],
+        "features": [
+            "Clean editor",
+            "Offline usage",
+            "Code snippets",
+            "Lightweight interface"
+        ]
+    },
+    {
+        "id": "studyflow",
+        "name": "StudyFlow",
+        "description": "Organize your study sessions and keep your learning focused.",
+        "longDescription": "StudyFlow is a simple study companion designed to help users organize study sessions and track their progress.",
+        "category": "Education",
+        "version": "2.0.1",
+        "size": "21 MB",
+        "rating": 4.9,
+        "downloads": 2130,
+        "android": "Android 7.0+",
+        "updated": "August 2026",
+        "developer": "Amin Code",
+        "redistributable": true,
+        "icon": "assets/studyflow.png",
+        "apk": "apks/studyflow.apk",
+        "hash": "c3d4e5f6a7b89012",
+        "releaseDate": "2026-08-22",
+        "screenshots": [
+            "assets/studyflow-1.png",
+            "assets/studyflow-2.png"
+        ],
+        "features": [
+            "Study sessions",
+            "Progress tracking",
+            "Simple statistics",
+            "Offline support"
+        ]
+    },
+    {
+        "id": "converter",
+        "name": "File Converter",
+        "description": "Convert supported files directly on your Android device.",
+        "longDescription": "File Converter is a lightweight utility for converting supported files without requiring an account or cloud service.",
+        "category": "Tools",
+        "version": "1.4.2",
+        "size": "16 MB",
+        "rating": 4.8,
+        "downloads": 1740,
+        "android": "Android 8.0+",
+        "updated": "August 2026",
+        "developer": "Amin Code",
+        "redistributable": true,
+        "icon": "assets/converter.png",
+        "apk": "apks/converter.apk",
+        "hash": "d4e5f6a7b8c90123",
+        "releaseDate": "2026-08-15",
+        "screenshots": [
+            "assets/converter-1.png",
+            "assets/converter-2.png"
+        ],
+        "features": [
+            "Offline conversion",
+            "Simple interface",
+            "Multiple formats",
+            "No account required"
+        ]
+    }
+]

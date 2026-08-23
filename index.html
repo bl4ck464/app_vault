@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="APKVault — Discover useful Android apps, tools and games from independent developers." />
+    <meta name="theme-color" content="#080808" />
+    <meta property="og:title" content="APKVault — Discover Android Apps" />
+    <meta property="og:description" content="Discover useful Android apps, tools and games from independent developers." />
+    <meta property="og:type" content="website" />
+    <title>APKVault — Discover Android Apps</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">A</span>
+            APK<span>Vault</span>
+        </a>
+        <nav id="mainNav">
+            <a href="index.html" class="active">Store</a>
+            <a href="#apps">Apps</a>
+            <a href="#developers">Developers</a>
+            <a href="distribution.html">Distribution</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button class="mobile-menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M4 6h16"/>
+                <path d="M4 12h16"/>
+                <path d="M4 18h16"/>
+            </svg>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">
+                    <span></span>
+                    The independent Android app store
+                </div>
+                <h1>
+                    DISCOVER APPS.<br>
+                    <span>BUILT DIFFERENT.</span>
+                </h1>
+                <p>
+                    Discover useful Android apps, tools and games
+                    from independent developers.
+                </p>
+                <div class="hero-actions">
+                    <a href="#apps" class="hero-primary">
+                        Explore Store
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"/>
+                            <path d="m13 6 6 6-6 6"/>
+                        </svg>
+                    </a>
+                    <a href="#developers" class="hero-secondary">
+                        For Developers
+                    </a>
+                </div>
+                <div class="store-note">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 3 8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/>
+                        <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    Official downloads. Independent developers.
+                </div>
+            </div>
+        </section>
+
+        <!-- APPS -->
+        <section class="apps-section" id="apps">
+            <div class="section-header">
+                <div>
+                    <p class="section-label">COLLECTION</p>
+                    <h2>Featured Apps</h2>
+                </div>
+                <span id="resultCount">0 apps</span>
+            </div>
+
+            <div class="search-box apps-search">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m20 20-4-4"/>
+                </svg>
+                <input id="searchInput" type="search" placeholder="Search apps..." autocomplete="off">
+            </div>
+
+            <div class="apps-grid" id="appsGrid"></div>
+        </section>
+
+        <!-- STORE VALUES -->
+        <section class="store-section">
+            <div class="store-section-inner">
+                <div class="store-section-heading">
+                    <p class="section-label">THE STORE</p>
+                    <h2>More than downloads.</h2>
+                    <p>A growing collection of Android apps, tools and games from independent developers.</p>
+                </div>
+                <div class="store-values">
+                    <article class="value-card reveal">
+                        <div class="value-icon">
+                            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3v18"/>
+                                <path d="M3 12h18"/>
+                            </svg>
+                        </div>
+                        <h3>Independent</h3>
+                        <p>Discover projects created by independent developers.</p>
+                    </article>
+                    <article class="value-card reveal">
+                        <div class="value-icon">
+                            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3>Official</h3>
+                        <p>Find the official source for applications and updates.</p>
+                    </article>
+                    <article class="value-card reveal">
+                        <div class="value-icon">
+                            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19V5"/>
+                                <path d="M4 5h14l-3 4 3 4H4"/>
+                            </svg>
+                        </div>
+                        <h3>Growing</h3>
+                        <p>New apps and developers can join the ecosystem over time.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPERS -->
+        <section class="developer-section" id="developers">
+            <div class="developer-content">
+                <p class="section-label">FOR DEVELOPERS</p>
+                <h2>
+                    Build it.<br>
+                    <span>Share it.</span>
+                </h2>
+                <p>
+                    The store is designed to grow with
+                    independent developers. Publish useful
+                    applications and reach new users.
+                </p>
+                <a href="distribution.html" class="main-download">
+                    Distribution Policy
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"/>
+                        <path d="m13 6 6 6-6 6"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark">A</span>
+                    APK<span>Vault</span>
+                </a>
+                <p>A growing home for independent Android applications.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#apps">Apps</a>
+                <a href="#developers">Developers</a>
+                <a href="distribution.html">Distribution</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        <div class="copyright">© 2026 APKVault. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
