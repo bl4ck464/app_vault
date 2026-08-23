@@ -216,6 +216,68 @@ function renderStore() {
     renderFeatured();
 }
 
+// ===== PAGINATION: LOAD MORE =====
+const PAGE_SIZE = 6;      // عدد التطبيقات في كل دفعة
+let currentPage = 1;      // الصفحة الحالية
+
+function renderAppsWithPagination(appList) {
+    const container = getAppsContainer();
+    if (!container) return;
+
+    const pagination = $("#pagination");
+
+    const totalPages = Math.ceil(appList.length / PAGE_SIZE);
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    const pageApps = appList.slice(start, end);
+
+    if (currentPage === 1) {
+        container.innerHTML = "";
+    }
+
+    if (pagination) pagination.innerHTML = "";
+
+    if (!pageApps.length && currentPage === 1) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">${icons.search}</div>
+                <h3>No applications found</h3>
+                <p>Try another search term.</p>
+                <button type="button" class="clear-search" data-clear-filters>Clear search</button>
+            </div>
+        `;
+        if (pagination) pagination.hidden = true;
+        return;
+    }
+
+    container.insertAdjacentHTML("beforeend", pageApps.map(createCard).join(""));
+
+    if (pagination) pagination.hidden = false;
+
+    if (currentPage < totalPages) {
+        pagination.innerHTML = `
+            <button class="hero-secondary load-more-btn" type="button">
+                Load More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6"/>
+                </svg>
+            </button>
+        `;
+        const btn = pagination.querySelector('.load-more-btn');
+        btn.addEventListener('click', () => {
+            currentPage++;
+            renderAppsWithPagination(appList);
+        });
+    }
+}
+
+// تعديل دالة renderApps لاستخدام pagination
+function renderApps(appList) {
+    currentPage = 1; // إعادة تعيين الصفحة عند كل بحث جديد
+    renderAppsWithPagination(appList);
+    updateCount(appList.length);
+}
+
 
 /* ==========================================================================
    APPLY SEARCH (بدلاً من applyFilters)
@@ -256,30 +318,6 @@ function setupSearch() {
             applySearch();
         });
     });
-}
-
-
-/* ==========================================================================
-   RENDER APPS
-   ========================================================================== */
-
-function renderApps(appList) {
-    const container = getAppsContainer();
-    if (!container) return;
-
-    if (!appList.length) {
-        container.innerHTML = `
-            <div class="empty-state">
-                <div class="empty-icon">${icons.search}</div>
-                <h3>No applications found</h3>
-                <p>Try another search term.</p>
-                <button type="button" class="clear-search" data-clear-filters>Clear search</button>
-            </div>
-        `;
-        return;
-    }
-
-    container.innerHTML = appList.map(createCard).join("");
 }
 
 
