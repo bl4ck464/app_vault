@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /assets/
-Disallow: /apks/
-
-Sitemap: https://bl4ck464.github.io/app_vault/sitemap.xml
